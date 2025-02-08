@@ -15,6 +15,8 @@ public class Program {
 		
 		SellerDao sellerDao = DaoFactory.createSellerDao();// aqui não precisa do new
 		
+		
+		System.out.println("=== TEST 1: seller findById ====");
 		Seller seller = sellerDao.findById(3);
 		
 		
