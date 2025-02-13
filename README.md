@@ -12,4 +12,70 @@ findById: Busca uma entidade pelo seu identificador único.
 
 findByDepartment: Recupera todos os vendedores associados a um determinado departamento.
 
+🛠️ Tecnologias Utilizadas
+
+Java: Linguagem de programação principal do projeto.
+
+JDBC (Java Database Connectivity): API para conexão e execução de operações no banco de dados.
+
+MySQL Community Server: Sistema de gerenciamento de banco de dados relacional utilizado.
+
+Padrão DAO: Para abstração e encapsulamento do acesso a dados.
+
+Padrão Factory: Para gerenciamento da criação de instâncias dos DAOs.
+
+📂 Estrutura do Projeto
+O projeto está organizado da seguinte forma:
+
+graphql
+Copiar
+Editar
+projeto_demo_dao_jdbc
+├── src
+│   ├── application
+│   │   └── Program.java       # Classe principal para execução da aplicação
+│   ├── db
+│   │   ├── DB.java            # Gerenciamento da conexão com o banco de dados
+│   │   └── DbException.java   # Classe para exceções relacionadas ao banco de dados
+│   ├── model
+│   │   ├── entities
+│   │   │   ├── Department.java  # Entidade Department
+│   │   │   └── Seller.java      # Entidade Seller
+│   │   ├── dao
+│   │   │   ├── DepartmentDao.java       # Interface DAO para Department
+│   │   │   ├── SellerDao.java           # Interface DAO para Seller
+│   │   │   ├── DaoFactory.java          # Factory para criação dos DAOs
+│   │   │   └── impl
+│   │   │       ├── DepartmentDaoJDBC.java  # Implementação JDBC do DAO de Department
+│   │   │       └── SellerDaoJDBC.java      # Implementação JDBC do DAO de Seller
+│   └── util
+│       └── DataUtil.java         # Utilitário para manipulação de datas
+├── db.properties                 # Arquivo de configuração do banco de dados
+├── .classpath                    # Arquivo de configuração do classpath do projeto
+├── .project                      # Arquivo de configuração do projeto
+└── README.md                     # Documentação do projeto
+
+🚀 Como Executar o Projeto
+Pré-requisitos:
+
+Java Development Kit (JDK) instalado.
+MySQL Community Server instalado e em execução.
+Configuração do Banco de Dados:
+
+Crie um banco de dados chamado coursejdbc.
+Execute os scripts SQL fornecidos para criar as tabelas necessárias.
+Configuração da Aplicação:
+
+Atualize o arquivo db.properties com as credenciais do seu banco de dados:
+ini
+Copiar
+Editar
+user=seu_usuario
+password=sua_senha
+dburl=jdbc:mysql://localhost:3306/coursejdbc
+useSSL=false
+Execução:
+
+Compile e execute a classe Program.java localizada em src/application.
+
 
