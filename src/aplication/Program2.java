@@ -1,5 +1,6 @@
 package aplication;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -24,6 +25,11 @@ public class Program2 {
 		for(Department d : list) {
 			System.out.println(d);
 		}
+		
+		System.out.println("\n=== TEST 4: department insert ====");
+		Department newDepartment = new Department(null, "Ifood");
+		departmentDao.insert(newDepartment);
+		System.out.println("Inserted! New id = " + newDepartment.getId());
 		
 		sc.close();
 
