@@ -78,4 +78,9 @@ Execução:
 
 Compile e execute a classe Program.java localizada em src/application.
 
+📌 Melhorias Futuras
+Implementação de Testes Unitários: Adicionar testes para garantir a integridade das operações CRUD.
+Tratamento de Exceções Aprimorado: Melhorar o manejo de exceções para cobrir mais cenários de erro.
+Refatoração para Padrão MVC: Organizar o projeto seguindo o padrão Model-View-Controller para uma melhor separação de responsabilidades.
+
 
